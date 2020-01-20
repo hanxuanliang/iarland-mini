@@ -1,1 +1,36 @@
 /* components/like/index.wxss */
+
+/* 两个方案解决块级元素独占一行 */
+.container {
+  /* 1.宽度自适应 */
+  display: inline-flex;
+  flex-direction: row;
+  /* 撑大整体高度 */
+  padding: 10rpx;
+  /* 2.容器设置为flex，不能改变它自身是块级的特性，它依然还是块级元素 */
+  /* width: 90rpx; */
+}
+
+.container image {
+  /* 
+    建议设计师在设计原稿的时候把原版尺寸定位750rpx × 1334rpx，
+    px和rpx在iPhone6下的换算为1：2
+    px在各种机型下显示都一样，尺寸不会因为机型发生改变；
+    所以建议使用rpx就会自适应机型 
+  */
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.container text {
+  font-size: 24rpx;
+  color: #bbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+  /* 
+    消除文字间距 
+    作为组件不要留无意义的空白，因为组件是要给他人使用的
+  */
+  line-height: 24rpx;
+}

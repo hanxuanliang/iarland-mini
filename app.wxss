@@ -1,10 +1,11 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+
+/* 
+  全局样式中只有【font color】样式才能被组件继承，
+  但是page却可以继承全局样式【几乎所有】
+*/
+page {
+  /* 苹方 思源 */
+  font-family: "PingFangSC-Thin";
+  font-size: 32rpx;
+}

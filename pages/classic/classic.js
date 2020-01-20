@@ -1,3 +1,7 @@
+import { HTTP } from "../../util/http"
+
+const http = new HTTP()
+
 // pages/classic/classic.js
 Page({
 
@@ -12,7 +16,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    /**
+     * wx.request():
+     * 不管服务器返回多少状态码，也就是说无论成功还是失败，都会走success；
+     * 如果当前网络中断或者是timeout，就会走fail
+     */
+    http.request({
+      url: 'classic/latest',
+      success: res => {
+        console.log(res)
+      }
+    })
   },
 
   /**

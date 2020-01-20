@@ -6,3 +6,6 @@ miniprogram_npm
 
 # config
 config/config.js
+
+# http
+api.http

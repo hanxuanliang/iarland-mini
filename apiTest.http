@@ -1,0 +1,4 @@
+@host = http://bl.7yue.pro
+@appkey= ...
+
+GET {{host}}/v1/classic/latest?appkey={{appkey}} HTTP/1.1
